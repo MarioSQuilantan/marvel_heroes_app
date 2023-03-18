@@ -1,4 +1,4 @@
-<!-- CI tag label goes here -->
+[![CI](https://github.com/MarioSQuilantan/marvel_heroes_app/actions/workflows/main.yml/badge.svg)](https://github.com/MarioSQuilantan/marvel_heroes_app/actions/workflows/main.yml)
 # Marvel Heroes App
 
 A Marvel Heroes app to show the most important events of the Marvel's heroes. This project was created in flutter using BLoC. This project supports Android and iOS devices:
