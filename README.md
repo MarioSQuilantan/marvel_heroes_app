@@ -109,23 +109,15 @@ core/
     |- failure.dart
     |- exception.dart
   |- utils/
-    |- mask/
-      |- mask.dart
-  |- extensions/
-    |- strings.extension.dart
-  |- languages/
-    |- en-EU.dart
-    |- es-ES.dart
+    |- encryptor.dart
+    |- scale_size.dart
   |- values/
     |- constants.dart
-    |- strings.dart
     |- enums.dart
     |- keys.dart
   |- theme/
     |- theme.dart
-    |- font.dart
-    |- text.dart
-    |- colors.dart
+    |- texts.dart
 ```
 
 ### Features
@@ -134,7 +126,7 @@ Contains the implementation business logic. will be divided into 3 layers - pres
 
 ```
 features/
-|- user
+|- feature
    |- data
    |- domain
    |- presentation
@@ -146,9 +138,9 @@ This folder contains the State Manager in this case BLoC.
 
 ```
 |- bloc/
-  |- user_bloc.dart
-  |- user_event.dart
-  |- user_state.dart
+  |- feature_bloc.dart
+  |- feature_event.dart
+  |- feature_state.dart
 ```
 
 ### Domain
@@ -157,11 +149,11 @@ This folder is the inner layer which shouldn't be susceptible to the whims of ch
 
 ```
 |- usecases
-  |- get_user_by_id.usecase.dart
+  |- feature.usecase.dart
 |- entities
-  |- user.entity.dart
+  |- feature.entity.dart
 |- repositories
-  |- user.repository.dart
+  |- feature.repository.dart
 ```
 
 ### Data
@@ -172,9 +164,9 @@ The data layer consists of a Repository implementation (the contract comes from 
 |- datasources/
   |- api.datasource.dart
 |- models/
-  |- user.model.dart
+  |- feature.model.dart
 |- repositories/
-  |- user.repository_imp.dart
+  |- feature.repository_imp.dart
 ```
 ### UI
 
@@ -182,12 +174,12 @@ This directory contains all the ui of your application. Each screen is located i
 
 ```
 ui/
-|- login/
+|- my_page/
   |- layouts/
     |- desktop.layout.dart
     |- phone.layout.dart
     |- tablet.layout.dart
-  |- login.page.dart
+  |- my_page.page.dart
   |- widgets
 ```
 ### Widgets
@@ -211,8 +203,8 @@ class AppRoutes {
   static GoRouter get call => GoRouter(
         routes: [
           GoRoute(
-            path: Routes.home,
-            builder: (context, state) => const HomePage(),
+            path: Routes.my_page,
+            builder: (context, state) => const MyPage(),
           ),
         ],
       );
@@ -268,7 +260,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
           title: 'Marvel Heroes App',
           theme: theme,
-          routerConfig: AppRoutes.call,
+          routerConfig: Routes.call,
       ),
     );
   }
