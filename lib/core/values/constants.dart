@@ -1,1 +1,3 @@
-// TODO(MarioSQuilantan): Implement constants code.
+class Routes {
+  static const String home = '/';
+}
