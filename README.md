@@ -56,6 +56,7 @@ Run the project in an Android or iOS device.
 * [BLoC test](https://pub.dev/packages/bloc_test) (A package that makes testing blocs and cubits easy)
 * [Mocktail](https://pub.dev/packages/mocktail) (Mock package for Dart)
 * [Go router](https://pub.dev/packages/go_router) (A declarative routing package for Flutter)
+* [Crypto](https://pub.dev/packages/crypto) (Implementations of SHA, MD5, and HMAC cryptographic functions)
 
 ### Folder Structure
 
