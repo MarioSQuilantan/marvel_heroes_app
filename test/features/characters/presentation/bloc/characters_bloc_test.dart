@@ -24,9 +24,16 @@ void main() {
   final tCharacterModel = CharacterModel.fromJson(jsonDecode(jsonReader('characters')));
   final tCharacter = tCharacterModel.toEntity();
   const tOffset = 0;
+  final tResults = tCharacter.data.results;
 
   test('initial state should be empty', () {
-    expect(charactersBloc.state, const CharactersInitial(offset: tOffset));
+    expect(
+      charactersBloc.state,
+      const CharactersInitial(
+        offset: tOffset,
+        results: [],
+      ),
+    );
   });
 
   blocTest<CharactersBloc, CharactersState>(
@@ -38,8 +45,15 @@ void main() {
     act: (bloc) => bloc.add(GetCharactersEvent()),
     wait: const Duration(milliseconds: 100),
     expect: () => [
-      CharactersIsLoading(),
-      CharactersHasData(tCharacter),
+      const CharactersIsLoading(
+        offset: tOffset,
+        results: [],
+      ),
+      CharactersHasData(
+        tCharacter,
+        offset: tOffset,
+        results: tResults,
+      ),
     ],
     verify: (bloc) {
       verify(() => getCharactersUseCase(const Params(offset: tOffset)));
@@ -56,8 +70,15 @@ void main() {
     act: (bloc) => bloc.add(GetCharactersEvent()),
     wait: const Duration(milliseconds: 100),
     expect: () => [
-      CharactersIsLoading(),
-      const CharactersHasError('Server Failure'),
+      const CharactersIsLoading(
+        offset: tOffset,
+        results: [],
+      ),
+      const CharactersHasError(
+        'Server Failure',
+        offset: tOffset,
+        results: [],
+      ),
     ],
     verify: (bloc) {
       verify(() => getCharactersUseCase(const Params(offset: tOffset)));
