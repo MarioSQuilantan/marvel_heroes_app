@@ -17,7 +17,8 @@ class ApiRemoteDataSourceImpl extends ApiRemoteDataSource {
   @override
   Future<CharacterModel> getCharacters(int offset) async {
     final queryParameters = {
-      'offset': '$offset',
+      'offset': offset,
+      'limit': 30,
     };
     final response = await networkClient.get(ApiConstants.getCharacters, queryParameters: queryParameters);
     if (response.statusCode >= 200 && response.statusCode < 400) {
