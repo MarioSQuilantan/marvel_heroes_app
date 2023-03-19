@@ -1,1 +1,1 @@
-// TODO(MarioSQuilantan): Create Exception code.
+class ServerException implements Exception {}
