@@ -11,7 +11,7 @@ class TextStyles {
 }
 
 class _Paragraph {
-  static const double _fontSize = 16.0;
+  static const double _fontSize = 12.0;
   final TextStyle bold = const TextStyle(fontSize: _fontSize, fontWeight: FontWeight.bold);
   final TextStyle italic = const TextStyle(fontSize: _fontSize, fontStyle: FontStyle.italic);
   final TextStyle normal = const TextStyle(fontSize: _fontSize, fontStyle: FontStyle.normal);
