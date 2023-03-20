@@ -11,3 +11,14 @@ class NoParams extends Equatable {
   @override
   List<Object?> get props => [];
 }
+
+class IdParams extends Equatable {
+  final int id;
+
+  const IdParams({
+    required this.id,
+  });
+
+  @override
+  List<Object?> get props => [id];
+}
