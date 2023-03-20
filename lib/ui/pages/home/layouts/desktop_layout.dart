@@ -9,9 +9,11 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const AppText.paragraph('Desktop'),
+        title: const AppText.paragraph('Characters'),
       ),
-      body: Container(),
+      body: const Center(
+        child: Text('Work in progress'),
+      ),
     );
   }
 }

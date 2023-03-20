@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'app_text.dart';
+import '../../widgets/app_text.dart';
 
-class CharacterCard extends StatelessWidget {
-  const CharacterCard({
+class PhoneCard extends StatelessWidget {
+  const PhoneCard({
     super.key,
     required this.imageUrl,
     required this.name,
@@ -29,19 +29,17 @@ class CharacterCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Expanded(
-            child: Material(
-              child: Container(
-                height: 270.0,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                  ),
-                  image: DecorationImage(
-                    image: NetworkImage(imageUrl),
-                    fit: BoxFit.cover,
-                  ),
+          Material(
+            child: Container(
+              height: 270.0,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
+                image: DecorationImage(
+                  image: NetworkImage(imageUrl),
+                  fit: BoxFit.cover,
                 ),
               ),
             ),

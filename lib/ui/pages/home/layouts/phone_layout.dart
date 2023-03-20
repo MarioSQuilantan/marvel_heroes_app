@@ -2,26 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marvel_heroes_app/app_routes.dart';
 import 'package:marvel_heroes_app/core/values/constants.dart';
-import 'package:marvel_heroes_app/ui/pages/widgets/character_card.dart';
+import 'package:marvel_heroes_app/ui/pages/home/widgets/phone_card_widget.dart';
 
 import '../../../../features/characters/presentation/bloc/characters_bloc.dart';
 import '../../widgets/app_text.dart';
 
-class PhoneLayout extends StatefulWidget {
+class PhoneLayout extends StatelessWidget {
   const PhoneLayout({super.key});
-
-  @override
-  State<PhoneLayout> createState() => _PhoneLayoutState();
-}
-
-class _PhoneLayoutState extends State<PhoneLayout> {
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      BlocProvider.of<CharactersBloc>(context).add(GetCharactersEvent());
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +65,7 @@ class _PhoneLayoutState extends State<PhoneLayout> {
                   // Show your info
                   return GestureDetector(
                     onTap: () => AppRoutes.push(context, Routes.character, extra: state.results[index]),
-                    child: CharacterCard(
+                    child: PhoneCard(
                       imageUrl: '${state.results[index].thumbnail.path}.${state.results[index].thumbnail.extension}',
                       name: state.results[index].name,
                     ),

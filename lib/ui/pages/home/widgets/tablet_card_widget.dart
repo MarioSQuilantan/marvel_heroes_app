@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'app_text.dart';
+import '../../widgets/app_text.dart';
 
-class CharacterCard extends StatelessWidget {
-  const CharacterCard({
+class TabletCard extends StatelessWidget {
+  const TabletCard({
     super.key,
     required this.imageUrl,
     required this.name,
@@ -51,14 +51,14 @@ class CharacterCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
               horizontal: 12.0,
             ),
-            child: AppText.h3(name),
+            child: AppText.h4(name),
           ),
           const SizedBox(height: 12.0),
           const Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 12.0,
             ),
-            child: AppText.h4('About character'),
+            child: AppText.h5('About character'),
           ),
           const SizedBox(height: 12.0),
           if (description != null) ...[
