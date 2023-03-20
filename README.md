@@ -39,11 +39,18 @@ Run the project in an Android or iOS device.
 
 ## Project Features:
 
-* coming soon
+* Characters lists
+* Character info
+* Character comics list
+* Character events list
+* Character series list
+* Character stories list
 
 ### Up-Coming Features:
 
-* coming soon
+* desktop design
+* refactor widgets
+* Add missing tests
 
 ### Libraries & Tools Used
 
