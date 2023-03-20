@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:marvel_heroes_app/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:marvel_heroes_app/core/interfaces/use_case.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/character_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/character_entity.dart';
 import 'package:marvel_heroes_app/features/characters/domain/repositories/characters_repository.dart';
 
 class GetCharactersUseCase extends UseCase<Character, Params> {

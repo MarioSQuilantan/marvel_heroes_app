@@ -1,4 +1,4 @@
-import '../../domain/entities/comics_entity.dart';
+import '../../domain/entities/characters/comics_entity.dart';
 import 'comics_item_model.dart';
 
 class ComicsModel extends Comics {

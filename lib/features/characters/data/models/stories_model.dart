@@ -1,4 +1,4 @@
-import '../../domain/entities/stories_entity.dart';
+import '../../domain/entities/characters/stories_entity.dart';
 import 'stories_item_model.dart';
 
 class StoriesModel extends Stories {

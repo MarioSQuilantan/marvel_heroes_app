@@ -3,7 +3,7 @@ import 'stories_model.dart';
 import 'thumbnail_model.dart';
 import 'url_model.dart';
 
-import '../../domain/entities/result_entity.dart';
+import '../../domain/entities/characters/result_entity.dart';
 
 class ResultModel extends Result {
   const ResultModel({

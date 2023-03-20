@@ -1,4 +1,4 @@
-import '../../domain/entities/url_entity.dart';
+import '../../domain/entities/characters/url_entity.dart';
 
 class UrlModel extends Url {
   const UrlModel({

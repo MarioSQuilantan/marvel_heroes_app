@@ -1,4 +1,4 @@
-import 'package:marvel_heroes_app/features/characters/domain/entities/comics_item_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/comics_item_entity.dart';
 
 class ComicsItemModel extends ComicsItem {
   const ComicsItemModel({

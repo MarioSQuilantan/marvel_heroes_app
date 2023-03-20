@@ -1,6 +1,6 @@
 import 'package:marvel_heroes_app/features/characters/data/models/result_model.dart';
 
-import '../../domain/entities/data_entity.dart';
+import '../../domain/entities/characters/data_entity.dart';
 
 class DataModel extends Data {
   const DataModel({

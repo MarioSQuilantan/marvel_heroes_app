@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/character_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/character_entity.dart';
 
 import '../../../../core/error/exception.dart';
 import '../../../../core/error/failure.dart';
 import '../../domain/repositories/characters_repository.dart';
-import '../datasources/api_remote_datasource.dart';
+import '../datasources/characters_api_remote_datasource.dart';
 
 class CharactersRepositoryImpl implements CharactersRepository {
-  final ApiRemoteDataSource apiRemoteDataSource;
+  final CharactersApiRemoteDataSource apiRemoteDataSource;
 
   CharactersRepositoryImpl(this.apiRemoteDataSource);
 

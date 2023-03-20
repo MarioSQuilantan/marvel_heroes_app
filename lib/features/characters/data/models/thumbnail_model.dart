@@ -1,4 +1,4 @@
-import '../../domain/entities/thumbnail_entity.dart';
+import '../../domain/entities/characters/thumbnail_entity.dart';
 
 class ThumbnailModel extends Thumbnail {
   const ThumbnailModel({

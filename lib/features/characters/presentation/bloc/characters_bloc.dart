@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/character_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/character_entity.dart';
 import 'package:marvel_heroes_app/features/characters/domain/usecases/get_characters_usecase.dart';
 
-import '../../domain/entities/result_entity.dart';
+import '../../domain/entities/characters/result_entity.dart';
 
 part 'characters_event.dart';
 part 'characters_state.dart';
