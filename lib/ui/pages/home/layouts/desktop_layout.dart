@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_heroes_app/ui/pages/widgets/app_text.dart';
+
+import '../../widgets/app_text.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});

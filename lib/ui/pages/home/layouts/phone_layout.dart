@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:marvel_heroes_app/ui/pages/widgets/app_text.dart';
+import 'package:marvel_heroes_app/app_routes.dart';
+import 'package:marvel_heroes_app/core/values/constants.dart';
+import 'package:marvel_heroes_app/ui/pages/widgets/character_card.dart';
 
 import '../../../../features/characters/presentation/bloc/characters_bloc.dart';
+import '../../widgets/app_text.dart';
 
 class PhoneLayout extends StatefulWidget {
   const PhoneLayout({super.key});
@@ -12,7 +15,6 @@ class PhoneLayout extends StatefulWidget {
 }
 
 class _PhoneLayoutState extends State<PhoneLayout> {
-  final ScrollController _scrollController = ScrollController();
   @override
   void initState() {
     super.initState();
@@ -75,60 +77,12 @@ class _PhoneLayoutState extends State<PhoneLayout> {
                 if (index < state.results.length) {
                   // Show your info
                   return GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        width: 170,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              color: Colors.grey[300]!,
-                              width: 1.0,
-                            ),
-                            borderRadius: const BorderRadius.all(Radius.circular(10))),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            Material(
-                              child: Container(
-                                height: 270.0,
-                                decoration: BoxDecoration(
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(10),
-                                    topRight: Radius.circular(10),
-                                  ),
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                        '${state.results[index].thumbnail.path}.${state.results[index].thumbnail.extension}'),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 12.0,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12.0,
-                              ),
-                              child: AppText.h3(state.results[index].name),
-                            ),
-                            const SizedBox(
-                              height: 12.0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 12.0,
-                              ),
-                              child: AppText.h4('About character'),
-                            ),
-                            const SizedBox(
-                              height: 12.0,
-                            ),
-                          ],
-                        ),
-                      ));
+                    onTap: () => AppRoutes.push(context, Routes.character, extra: state.results[index]),
+                    child: CharacterCard(
+                      imageUrl: '${state.results[index].thumbnail.path}.${state.results[index].thumbnail.extension}',
+                      name: state.results[index].name,
+                    ),
+                  );
                   // return Text("$index");
                 } else {
                   // getMoreData();
