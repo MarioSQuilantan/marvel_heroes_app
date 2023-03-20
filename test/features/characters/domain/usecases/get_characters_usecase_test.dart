@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/character_entity.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/data_entity.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/result_entity.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/thumbnail_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/character_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/data_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/result_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/thumbnail_entity.dart';
 import 'package:marvel_heroes_app/features/characters/domain/usecases/get_characters_usecase.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:dartz/dartz.dart';

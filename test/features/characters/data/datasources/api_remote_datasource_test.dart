@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:marvel_heroes_app/core/error/exception.dart';
 import 'package:marvel_heroes_app/core/network/http_client.dart';
 import 'package:marvel_heroes_app/core/utils/json_reader.dart';
-import 'package:marvel_heroes_app/features/characters/data/datasources/api_remote_datasource.dart';
+import 'package:marvel_heroes_app/features/characters/data/datasources/characters_api_remote_datasource.dart';
 import 'package:marvel_heroes_app/features/characters/data/models/character_model.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -17,7 +17,7 @@ class FakeUri extends Fake implements Uri {}
 void main() {
   late MockHttp http;
   late HttpClient httpClient;
-  late ApiRemoteDataSourceImpl dataSource;
+  late CharactersApiRemoteDataSourceImpl dataSource;
 
   setUpAll(() {
     registerFallbackValue(Uri());
@@ -26,7 +26,7 @@ void main() {
   setUp(() {
     http = MockHttp();
     httpClient = HttpClient(http);
-    dataSource = ApiRemoteDataSourceImpl(httpClient);
+    dataSource = CharactersApiRemoteDataSourceImpl(httpClient);
   });
 
   final tJsonData = jsonReader('characters');

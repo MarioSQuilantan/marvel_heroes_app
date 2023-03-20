@@ -11,7 +11,7 @@ import 'package:marvel_heroes_app/features/characters/data/models/stories_item_m
 import 'package:marvel_heroes_app/features/characters/data/models/stories_model.dart';
 import 'package:marvel_heroes_app/features/characters/data/models/thumbnail_model.dart';
 import 'package:marvel_heroes_app/features/characters/data/models/url_model.dart';
-import 'package:marvel_heroes_app/features/characters/domain/entities/character_entity.dart';
+import 'package:marvel_heroes_app/features/characters/domain/entities/characters/character_entity.dart';
 
 void main() {
   const CharacterModel tCharactersModel = CharacterModel(
